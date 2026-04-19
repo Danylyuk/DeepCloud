@@ -1,2 +1,45 @@
-# DeepCloud
-Public issue tracker and architecture overview for DeepCloud — Ukrainian private cloud storage.
+# ☁️ DeepCloud — Private & Secure Cloud Storage
+
+Ласкаво просимо до публічного репозиторію **DeepCloud**! 
+Це офіційний трекер завдань (Issue Tracker) та архітектурний огляд українського хмарного сховища. 
+
+Оскільки основний код є закритим (Private), цей репозиторій слугує для збору фідбеку, баг-репортів та пропозицій від спільноти.
+
+🔗 **Сайт проєкту:** [deepcloud.com.ua](https://deepcloud.com.ua)
+
+---
+
+## 🏗 Архітектура та Стек
+
+Ми не використовуємо готових SaaS-рішень. DeepCloud працює на власному "залізі" з кастомним клієнтом.
+
+### 🖥 Hardware (Залізо)
+* **Сервери:** Dell R740XD2 26LFF + Dell PowerEdge R720xd.
+* **Сховище:** 160 TB WD Red Label.
+* **Масив:** Microsoft Storage Space Device (Дзеркальний RAID — всі дані дублюються двічі).
+
+### 🧠 Software Stack
+* **OS:** Windows Server 2022 (Бронебійна стабільність).
+* **Backend:** Ізольований Docker-контейнер із [Pydio Cells](https://pydio.com) + MariaDB (Native AES-256 Encryption & Zero-Knowledge Architecture).
+* **Frontend:** Кастомний клієнт, написаний з нуля на **Next.js + Tailwind CSS** (Apple-minimalism & Dark Theme).
+* **Network:** Трафік захищено через Cloudflare (Full SSL).
+
+---
+
+## 🔥 Головні Фічі
+
+* **B2B-Вітрини (Showcases):** Перетворення будь-якої папки на повноцінний сайт-портфоліо у два кліки.
+* **Smart Streaming:** Відтворення відео (до 4K) та аудіо байтовими діапазонами без необхідності завантаження.
+* **Picture-in-Picture (PiP):** Дивіться відео і паралельно працюйте з файлами.
+* **Native-like UX:** Drag & Drop, зручні галереї, прев'ю PDF/TXT/JS та перегляд вмісту ZIP-архівів (до 350 МБ) без розпакування.
+
+---
+
+## 🐛 Знайшли баг або є ідея?
+
+Ми відкриті до пропозицій! Якщо ви тестуєте DeepCloud і знайшли помилку або хочете запропонувати нову фічу:
+1. Перейдіть на вкладку **[Issues](../../issues)**.
+2. Натисніть **New Issue**.
+3. Опишіть проблему або ідею (додавайте скріншоти за можливості).
+
+Якщо знайдете критичну вразливість — з нас пиво (або підписка на хмару)! 🍻
